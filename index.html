@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supermarket Sales Dashboard</title>
+<style>
+:root{--bg:#F2F6FD;--surface:#FFFFFF;--ink:#16204A;--muted:#52608A;--line:#D4DEF3;--accent:#3949AB;--on-accent:#FFFFFF}
+@media (prefers-color-scheme: dark){:root{--bg:#0E1328;--surface:#171E3A;--ink:#E9EDFB;--muted:#A9B4DA;--line:#2B3560;--accent:#8C9CFF;--on-accent:#0E1330;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.55;
+padding:24px max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px))}
+main{max-width:920px;margin:0 auto;display:grid;gap:24px}
+h1{margin:0;font-size:clamp(1.7rem,6vw,2.5rem);line-height:1.15}
+h2{margin:0;font-size:1.25rem}
+.by{color:var(--muted);margin:6px 0 0}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;gap:2px}
+.kpi span{color:var(--muted);font-size:.9rem}
+.kpi b{font-size:1.7rem;color:var(--accent);font-variant-numeric:tabular-nums}
+a.img{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px}
+a.img img{display:block;width:100%;height:auto;border-radius:6px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:10px}
+ul{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.btn{display:block;text-align:center;padding:14px 16px;border-radius:12px;font-weight:700;text-decoration:none;background:var(--accent);color:var(--on-accent)}
+.btn:focus-visible,a.img:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.foot{color:var(--muted);font-size:.9rem;margin:0}
+p{margin:0}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Supermarket Sales Dashboard</h1>
+    <p class="by">Created by Sana Naik</p>
+  </header>
+
+  <p>A Looker Studio dashboard that analyses supermarket sales by customer type, city, branch, product line and gender.</p>
+
+  <section class="kpis" aria-label="Key figures">
+    <div class="kpi"><span>Total sales</span><b>323.0K</b></div>
+    <div class="kpi"><span>Gross income</span><b>15.4K</b></div>
+    <div class="kpi"><span>Records</span><b>1K</b></div>
+    <div class="kpi"><span>Quantity sold</span><b>6K</b></div>
+  </section>
+
+  <a class="img" href="supermarket-sales-dashboard.png" target="_blank" rel="noopener"><img src="supermarket-sales-dashboard.png" alt="Supermarket Sales Dashboard built in Looker Studio"></a>
+
+  <section class="panel">
+    <h2>What the dashboard shows</h2>
+    <ul>
+      <li>Customer sales split between members (50.8%) and normal customers (49.2%)</li>
+      <li>Sales by city: Naypyitaw 111K, Yangon 106K and Mandalay 106K</li>
+      <li>Gross income by branch: C 34.2%, A 32.9% and B 32.9%</li>
+      <li>Unit price against sales for six product lines: food, sports, electronics, fashion, home and health</li>
+      <li>Gross income and record count by product line</li>
+      <li>Gross income by gender and city</li>
+    </ul>
+    <a class="btn" href="Supermarket_Sales_Dashboard.pdf" target="_blank" rel="noopener">Open the full report (PDF)</a>
+    <p class="foot">Tap the picture to see it full size.</p>
+  </section>
+</main>
+</body>
+</html>
